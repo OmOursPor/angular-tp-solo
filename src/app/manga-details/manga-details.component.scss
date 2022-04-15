@@ -1,0 +1,39 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    gap: 10%;
+
+    & img {
+            height: 300px;
+        }
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        & h3 {
+            font-size: 1.6em;
+            margin-bottom: 12px;
+        }
+
+        & h6 {
+            font-size: 1.4em;
+        }
+        
+        & > button {
+            height: 30px;
+            border: none;
+            box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+            color: orange;
+            font-size: 1.1em;
+          } 
+    }
+
+}

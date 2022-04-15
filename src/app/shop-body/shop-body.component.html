@@ -1,0 +1,28 @@
+<section class="body">
+    <div>
+        <input #box
+            (keyup)="update(box.value)"
+            (blur)="update(box.value)">
+        
+        <select #select
+            id="tri" (change)="tri(select.value)">
+            <option value="A - Z">A - Z</option>
+            <option value="Z - A">Z - A</option>
+            <option value="Plus récent">Plus récent</option>
+            <option value="Plus ancien">Plus ancien</option>
+        </select>
+    </div>
+      
+    <div class="list-items">
+        <div *ngFor="let item of list">
+            <h5>{{item.title}}</h5>
+            <img src={{item.imageUrl}} alt=""/>
+            <p>{{item.description}}</p>
+            <p>Price : {{item.price}}$</p>
+            <div>
+                <input type="button" #unlikeClass (click)="pushLike(unlikeClass)" value="like"/>
+                <input type="button" value="details" routerLink={{item.id}}/> 
+            </div>
+        </div>
+    </div>
+</section>

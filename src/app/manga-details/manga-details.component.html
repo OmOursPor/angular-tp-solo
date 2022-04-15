@@ -1,0 +1,10 @@
+<section>
+    <img src="{{article?.imageUrl}}" alt="">
+    <div>
+        <h3>{{article?.title}}</h3>
+        <p>Avis: {{article?.description}}</p>
+        <p>Date de sortie: {{article?.createdDate}}</p>
+        <h6>Prix: {{article?.price}}€</h6>
+        <button (click)="buy()">Acheter</button>
+    </div>
+</section>

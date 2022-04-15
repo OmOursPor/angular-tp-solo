@@ -1,0 +1,12 @@
+<section>
+  <h2>Panier:</h2>
+  <div *ngFor="let item of items; let index = index">
+      <img src={{item.imageUrl}}/>
+      <div>
+        <h6>Titre: {{item.title}}</h6>
+        <p>Description{{item.description}}</p>
+        <p>Prix: {{item.price}}€</p>
+      </div>
+      <button (click)="remove(index)">Supprimer</button>
+  </div>
+</section>
